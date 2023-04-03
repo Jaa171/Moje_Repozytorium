@@ -4,7 +4,7 @@ using namespace std;
 
 class Plant {
 public:
-	virtual void grow(int a);
+	virtual void grow(int a)=0;
 
 };
 
@@ -22,13 +22,9 @@ private:
 	string color;
 	int height;
 public:
-	Tree(string color) {
+	Tree(string color, int height) {
 		this->color = color;
-	}
-	
-	Tree(int height) {
 		this->height = height;
-	
 	}
 	
 
@@ -44,12 +40,12 @@ public:
 int main()
 {
 
-	Tree brzoza("bialy");
-	Tree brzoza(5);
+	Tree brzoza("bialy", 5);
 
-	void grow(5);
-	void makeSound();
 
-	//cout << height;
+	brzoza.grow(5);
+	brzoza.makeSound();
+
+	//out << height;
 	//cout << color;
 }
